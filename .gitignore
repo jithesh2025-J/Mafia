@@ -1,2 +1,14 @@
 api_key.txt
 
+# Build outputs
+*.o
+*.obj
+*.exe
+*.res.o
+
+# Generated audio assets
+audio_generated/
+
+# Local runtime data
+stats.txt
+
