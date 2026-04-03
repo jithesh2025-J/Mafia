@@ -1,0 +1,15 @@
+gamesPlayed=7
+wins=2
+losses=5
+mafiaWins=1
+townWins=1
+jokerWins=0
+nightDurationSec=30
+discussionDurationSec=60
+aiAccusationBias=0
+aiChatMinDelaySec=3
+aiChatMaxDelaySec=8
+masterVolume=100
+uiVolume=100
+sfxVolume=100
+ambientVolume=100
