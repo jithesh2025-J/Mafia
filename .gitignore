@@ -1,3 +1,37 @@
+# Visual Studio Code
+.vscode/
+
+# Scoped generated directories
+scoped_dir*/
+
+# Build artifacts
+build/
+bin/
+obj/
+*.exe
+*.dll
+*.lib
+*.o
+*.obj
+*.pdb
+
+# Generated audio and other outputs
+audio_generated/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs and temp
+*.log
+*.cache
+
+# Secrets
+api_key.txt
+
+# Misc
+*.user
+*.suo
 api_key.txt
 
 # Build outputs
