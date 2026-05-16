@@ -1,110 +1,153 @@
-# MafiaGame
+# Mafia Game
 
-Mafia social-deduction game written in C++ with SFML.
+A C++ implementation of the classic Mafia social deduction game featuring modular object-oriented architecture, role-based gameplay mechanics, voting systems, and turn-based game flow.
 
-## Build (Windows)
+---
 
-Use the provided batch script:
+## Features
 
-```bat
-test_sfml_gcc.bat
+- Multiple player roles
+- Doctor healing system
+- Detective investigation mechanics
+- Mafia elimination phase
+- Voting and discussion system
+- Turn-based gameplay loop
+- Modular OOP-based architecture
+- Separate header and implementation files
+- Error handling and game-state management
+- AI-assisted development workflow using GitHub Copilot
+
+---
+
+## Tech Stack
+
+- C++
+- Object-Oriented Programming (OOP)
+- Git & GitHub
+
+---
+
+## Project Structure
+
+```bash
+Mafia/
+│
+├── AIClient.cpp
+├── AIClient.h
+├── Detective.cpp
+├── Detective.h
+├── Doctor.cpp
+├── Doctor.h
+├── Game.cpp
+├── Game.h
+├── Player.cpp
+├── Player.h
+├── Mafia.cpp
+├── Mafia.h
+├── AllExeptions.cpp
+├── AllExeptions.h
+├── main.cpp
+├── .gitignore
+└── README.md
 ```
 
-Expected output on success:
+---
 
-```text
-Build succeeded: mafia.exe
+## Gameplay Overview
+
+The game follows the traditional Mafia format:
+
+1. Players are assigned different roles.
+2. Mafia members secretly eliminate players during the night phase.
+3. Special roles such as Doctor and Detective perform their actions.
+4. Players discuss and vote during the day phase.
+5. The game continues until either:
+   - All Mafia members are eliminated
+   - Mafia outnumbers remaining players
+
+---
+
+## Object-Oriented Design
+
+The project uses modular OOP principles including:
+
+- Classes for different player roles
+- Encapsulation of gameplay mechanics
+- Separate implementation and header files
+- Reusable game logic
+- Scalable architecture for future features
+
+---
+
+## How To Compile
+
+Using g++:
+
+```bash
+g++ *.cpp -o mafia
 ```
 
-## Run
+---
 
-```bat
+## How To Run
+
+```bash
+./mafia
+```
+
+For Windows:
+
+```bash
 mafia.exe
 ```
 
-## Balance Simulation Mode
+---
 
-Run headless AI simulations to estimate win rates:
+## Future Improvements
 
-```bat
-mafia.exe --simulate --matches 100
-```
+Planned upgrades and ideas:
 
-Useful options:
+- Multiplayer support
+- Network socket implementation
+- Graphical user interface (GUI)
+- AI-controlled players
+- Save/load game system
+- Voice chat integration
+- Improved game balancing
+- Online matchmaking
+- Web-based version using React and Node.js
 
-- `--players 5..10`
-- `--det on|off`
-- `--doc on|off`
-- `--joker on|off`
-- `--godfather on|off`
-- `--silencer on|off`
-- `--max-rounds 10..200`
-- `--seed <number>`
+---
 
-Example:
+## Learning Outcomes
 
-```bat
-mafia.exe --simulate --matches 300 --players 8 --joker on --godfather on --silencer on
-```
+This project helped in learning and practicing:
 
-## Controls
+- Object-Oriented Programming
+- Game-state management
+- Modular software architecture
+- Debugging and problem solving
+- Git and version control
+- Collaborative AI-assisted development workflow
 
-- Mouse: interact with buttons and choose targets.
-- `Esc`: back to Home from non-match pages, quick menu behavior during match.
-- `Q`: quick menu in-match (Resume / Home / Exit).
-- `Tab`: toggle player hint/info panel in-match.
-- `M`: mute/unmute audio.
-- `[` / `]`: lower/raise music volume.
-- `-` / `=`: lower/raise SFX volume.
+---
 
-## Custom Audio Pack (Premium Feel)
+## GitHub
 
-You can replace the generated fallback sounds with your own files.
+Repository:
+https://github.com/jithesh2025-J/Mafia
 
-1. Create either `audio_pack/` or `audio/` in the game folder.
-2. Add your files using any of these names (extensions: `.ogg`, `.wav`, `.flac`):
+---
 
-- Menu ambience: `ambient_menu` / `menu_loop` / `menu_ambient`
-- In-game ambience: `ambient_game` / `game_loop` / `match_ambient`
-- UI click: `ui_click` / `click` / `button_click`
-- UI confirm: `ui_confirm` / `confirm` / `button_confirm`
-- Chat open/send: `chat_open` / `ui_chat_open` / `chat_notification`
-- Vote reveal tick: `vote_tick` / `voting_tick` / `vote_reveal`
-- Kill/death: `kill` / `kill_stab` / `death_event`
-- Phase transition: `phase_shift` / `phase_transition` / `round_transition`
+## Author
 
-If a file is missing, the game falls back to generated audio so it always runs.
+Developed by Jithesh S
 
-Tip: In Settings, use the Audio Preview panel to test every event sound plus quick menu/game ambience previews before starting a match.
+GitHub:
+https://github.com/jithesh2025-J
 
-## Gameplay Flow
+---
 
-1. Main Menu
-2. Lobby
-3. Role Reveal
-4. Night actions
-5. Day reveal
-6. Discussion
-7. Voting
-8. Repeat until win condition is reached
+## License
 
-## Win Conditions
-
-- Village wins when all mafia-aligned players are eliminated.
-- Mafia wins when mafia count is equal to or greater than non-mafia count.
-- Joker wins if voted out during daytime voting.
-
-## Final Release Quality Gate
-
-Before shipping `v1.0.0`, ensure:
-
-- No crash/soft-lock during 30 complete matches.
-- Instructions screen is complete and readable.
-- UI layout remains synchronized and centered in fullscreen/resized windows.
-- Audio controls and settings are consistent and persistent.
-- Fresh-machine build and run are verified.
-
-## Notes
-
-- This project began as an Advanced Programming course assignment.
-- Original wiki: https://github.com/ghminaei/MafiaGame/wiki
+This project is open-source and available under the MIT License.
