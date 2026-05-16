@@ -11,4 +11,4 @@ audio_generated/
 
 # Local runtime data
 stats.txt
-
+.vscode/
