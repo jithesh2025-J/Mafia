@@ -1,6 +1,6 @@
-gamesPlayed=7
+gamesPlayed=9
 wins=2
-losses=5
+losses=7
 mafiaWins=1
 townWins=1
 jokerWins=0
